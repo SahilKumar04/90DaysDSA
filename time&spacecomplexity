@@ -1,0 +1,14 @@
+1. Time complexity : it is the amount of time taken by the algorithm to run
+                : as a function of the length of input 
+    why : for better programs
+        : comparision of algorithm
+        Notation: Big (O) Notation
+                : Theta (Q)
+                : Omega (Omega)
+    complexity:O(1)<O(log N)<O(N)<O(N log N)<O(N^2)<O(N^3)<O(2^N)<O(N!)
+2. Space complexity : space require by the varibale
+            eg : int a =1 , b = 2 , c = 3 , d = 4 , e = 5 , f = 6 
+                    above the space complexity is O(1) because it is constant 
+            eg : int arr[5] =  {1,2,3,4,5,6,7,8,9,10,11}
+                    above the space complexity is O(1) because it is constant 5 length of array
+                
