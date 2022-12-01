@@ -1,0 +1,11 @@
+Use cases for Stacks
+A common real-life example is a stack of plates where you can add or remove from it, which explains Stacks to a 5-year-old.
+Browsers use the Stack data structure as well to keep records of your browsing history where the last visit is the first on the record. So, if you use the back button you then go to the last visited site.
+Same as call logs where your recent calls are placed on top of each other. Undo/Redo mechanisms in text editors use the Stack data structure to keep track of recent activities.
+Reversing a word is applicable using Stack where we can pop the letters out and what we get becomes the reverse.
+Another application of Stack is in the Tower of Hanoi and it is the most optimal way of solving this puzzle. The goal of the puzzle is to move all the disks from one rod to the next rod.
+Other use cases for Stacks include the following;
+Recursion handling
+Backtracking
+Function calls in a Compiler
+Most JVMs are Stack oriented.
