@@ -1,44 +1,45 @@
-//////////////////// merge sorting //////////////////////////////////
-let arry = [30,45,56,11,22,47,32,20];
-console.log(my_fun(arry));
-function my_fun(arry){
-    let n = arry.length
-    let left =[]
-    let right = []
-    if (n < 2) return ;
-    mid = Math.round(arry.length/2)
-    for (let i = 0; i < mid; i++) left.push(arry[i])
-    for (let i = mid; i < arry.length; i++) right.push(arry[i])
-    my_fun(left);
-    my_fun(right);
-    return merge_fun(left,right,arry)
+const left = [1,2,4,7]
+const right = [5,6,8,9]
+const array = [8,6,2,9,4,7,5,1]
+console.log(mergeShort(array));
+function mergeShort(array){
+    let Left= [];
+    let Right= [];
+    let start = 0;
+    if(array.length < 2) return;
+    let end = array.length - 1;
+    let mid = Math.floor(start + (end - start) / 2);
+    for(let i=0;i<array.length;i++){
+        if (i <= mid) Left.push(array[i]);
+        if (i > mid) Right.push(array[i]);
+    }
+    mergeShort(Left)
+    mergeShort(Right)
+    return my_fun(Left,Right,array)
 }
-function merge_fun(left,right,arry) {
-    let nl = left.length;
-    let nr = right.length;
-    let i = 0;
-    let j = 0;
-    let k = 0;
-    while (i < nl && j<nr){
+function my_fun(left, right, myArray){
+    const nL= left.length;
+    const nR= right.length;
+    let i=j=k = 0;
+    while (i < nL && j < nR){
         if (left[i] <= right[j]){
-            arry[k] = left[i];
+            myArray[k] = left[i]; 
             i++;
         }else{
-            arry[k] = right[j];
+            myArray[k] = right[j];
             j++;
         }
         k++;
     }
-    while(i < nl){
-        arry[k] = left[i];
+    while (i < nL){
+        myArray[k] = left[i];
         i++;
         k++;
     }
-    while(j < nr){
-        arry[k] = right[j];
+    while (j < nR){
+        myArray[k] = right[j];
         j++;
         k++;
     }
-    return arry;
+    return myArray;
 }
-
